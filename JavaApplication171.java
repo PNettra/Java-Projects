@@ -99,26 +99,28 @@ public class JavaApplication171 {
 
     public static void main(String[] args) {
 
+        Scanner s = new Scanner(System.in);
+
         double choice;
         double price = 30;
         double cash = 75000;
         double USD = 0;
         double y = 0;
 
-        GetLive rand = new GetLive();
-        rand.addprice();
-        double PR = rand.getprice();
-
-        Wallet BTCroll = new Wallet();
-        BTCroll.addBTC(USD / rand.getprice());
-        double BT = BTCroll.getBTC();
-
-        Ledger ledger = new Ledger();
-        myDateClass date = new myDateClass();
-        Wallet Wallet = new Wallet();
-
         while (true) {
-            Scanner s = new Scanner(System.in);
+
+            GetLive rand = new GetLive();
+            rand.addprice();
+            double PR = rand.getprice();
+
+            Wallet BTCroll = new Wallet();
+            BTCroll.addBTC(USD / rand.getprice());
+            double BT = BTCroll.getBTC();
+
+            Ledger ledger = new Ledger();
+            myDateClass date = new myDateClass();
+            Wallet Wallet = new Wallet();
+
             System.out.println("Welcome to Bitcoin Buys.");
             System.out.println("1. price");
             System.out.println("2. buy");
@@ -193,3 +195,4 @@ public class JavaApplication171 {
 
     }
 }
+
